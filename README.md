@@ -10,4 +10,6 @@ https://github.com/mrtolkien/leaguepedia_parser
 
 ## Running Locally
 
-'''python run_api.py'''
+'''
+python run_api.py
+'''
