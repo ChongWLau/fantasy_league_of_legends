@@ -1,5 +1,5 @@
 fastapi>=0.88.0
 structlog>=22.3.0
 uvicorn>=0.20.0
-mwclient>=0.10.1
+leaguepedia_parser>=2.0.1
 sqlfluff
