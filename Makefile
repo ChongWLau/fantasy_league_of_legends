@@ -24,6 +24,9 @@ pytest:
 behave:
 	behave features --stop
 
+mypy:
+	mypy ${LINT_FILES}
+
 lint: mypy
 	black ${LINT_FILES}
 	isort --profile black ${LINT_FILES}
