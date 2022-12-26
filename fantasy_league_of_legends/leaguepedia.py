@@ -5,26 +5,26 @@ from leaguepedia_parser.site.leaguepedia import leaguepedia
 x = leaguepedia.query(
     tables="Tournaments",
     fields=", ".join({"Name", "OverviewPage", "League"}),
-    where=f"Tournaments.League ='LoL EMEA Championship'",
+    where="Tournaments.League ='LoL EMEA Championship'",
     # where=f"Tournaments.OverviewPage ='LEC/2021 Season/Summer Season'",
 )
 
 y = leaguepedia.query(
     tables="Leagues",
     fields=", ".join({"League", "Region", "League_Short"}),
-    where=f"Leagues.Region ='Europe'",
+    where="Leagues.Region ='Europe'",
 )
 
 z = leaguepedia.query(
     tables="TournamentRosters",
     fields=", ".join({"Team"}),
-    where=f"TournamentRosters.OverviewPage ='LEC/2021 Season/Summer Season'",
+    where="TournamentRosters.OverviewPage ='LEC/2021 Season/Summer Season'",
 )
 
 a = leaguepedia.query(
     tables="TournamentPlayers",
     fields=", ".join({"Team", "Player", "Role"}),
-    where=f"TournamentPlayers.OverviewPage ='LEC/2021 Season/Summer Season'",
+    where="TournamentPlayers.OverviewPage ='LEC/2021 Season/Summer Season'",
 )
 
 print(a)

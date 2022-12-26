@@ -1,5 +1,6 @@
 import structlog
 from behave.api.async_step import async_run_until_complete
+
 from fantasy_league_of_legends.app import create_app, setup_db_pool
 from fantasy_league_of_legends.config import Settings
 

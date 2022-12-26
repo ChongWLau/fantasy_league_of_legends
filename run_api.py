@@ -1,9 +1,10 @@
-import structlog
 import asyncio
-import uvicorn
-from fantasy_league_of_legends.config import Settings
-from fantasy_league_of_legends.app import create_app
 
+import structlog
+import uvicorn
+
+from fantasy_league_of_legends.app import create_app
+from fantasy_league_of_legends.config import Settings
 
 if __name__ == "__main__":
     settings = Settings()
@@ -35,7 +36,7 @@ if __name__ == "__main__":
                 "level": settings.LOG_LEVEL_AS_INT,
             },
             "uvicorn.error": {
-              "level": settings.LOG_LEVEL_AS_INT,  
+                "level": settings.LOG_LEVEL_AS_INT,
             },
             "uvicorn.access": {
                 "handlers": ["access"],
@@ -44,11 +45,8 @@ if __name__ == "__main__":
             },
         },
     }
-    
+
     app = asyncio.run(create_app(logger=logger, settings=settings))
     uvicorn.run(
-        app,
-        port=settings.API_PORT,
-        host=settings.API_HOST,
-        log_config=log_config
+        app, port=settings.API_PORT, host=settings.API_HOST, log_config=log_config
     )

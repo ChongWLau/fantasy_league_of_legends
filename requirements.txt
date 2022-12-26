@@ -4,4 +4,5 @@ fastapi>=0.88.0
 structlog>=22.3.0
 uvicorn>=0.20.0
 leaguepedia_parser>=2.0.1
-sqlfluff>=1.4.5
+sqlfluff>=1.4.
+buildpg>=0.4
