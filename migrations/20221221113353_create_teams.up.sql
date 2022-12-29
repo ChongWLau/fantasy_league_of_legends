@@ -1,11 +1,14 @@
 CREATE TABLE fantasy_players (
-    player_name VARCHAR PRIMARY KEY,
-    player_team VARCHAR NOT NULL,
-    player_role VARCHAR NOT NULL,
-    fantasy_team_id UUID NOT NULL
+    player_name text PRIMARY KEY,
+    player_team text NOT NULL,
+    player_role text NOT NULL,
+    fantasy_team_id uuid NOT NULL,
+    is_playing boolean,
+    is_open_for_trade boolean
 );
 CREATE TABLE fantasy_team (
-    id UUID PRIMARY KEY,
-    fantasy_name VARCHAR NOT NULL,
-    fantasy_owner VARCHAR NOT NULL
+    id uuid NOT NULL,
+    team_name text NOT NULL,
+    team_owner text NOT NULL,
+    PRIMARY KEY (id)
 );
