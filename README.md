@@ -2,6 +2,9 @@
 
 ## API & Docs
 
+API Docs:
+- [POST /team](#post-team)
+
 Uses the Leaguepedia API for data:
 https://lol.fandom.com/wiki/Help:Leaguepedia_API
 
@@ -9,6 +12,7 @@ And also the leaguepedia_parser wrapper to help query the data:
 https://github.com/mrtolkien/leaguepedia_parser
 
 ## Running Locally
+
 1. Setup local db
 
 ```
@@ -21,7 +25,6 @@ make migrate-up
 ```
 make service
 ```
-
 
 ## Setting up for development
 
@@ -75,6 +78,7 @@ Example response
 ```
 HTTP/2 201
 Content-type: application/json
+
 {
     "team_name": "A-Team",
     "team_owner": "Mr T",
