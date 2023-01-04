@@ -11,19 +11,15 @@ https://github.com/mrtolkien/leaguepedia_parser
 ## Running Locally
 1. Setup local db
 
-"""
-
-    make up
-    make migrate-up
-
-"""
+```
+make up
+make migrate-up
+```
 
 2. Running the service
 
 ```
-
 make service
-
 ```
 
 
@@ -31,29 +27,29 @@ make service
 
 1. Create and activate a virtual environment (venv)
 
-'''
+```
 python3 -m venv venv
 source venv/bin/activate
-'''
+```
 
 2. Install requirements
 
-'''
+```
 make install
-'''
+```
 
 3. Setup local db
 
-'''
+```
 make up
 make migrate-up
-'''
+```
 
 4. Running Tests
 
-'''
+```
 make test
-'''
+```
 
 
 ## API Docs
@@ -64,19 +60,19 @@ Create a fantasy team with a given 'name' and 'owner'.
 
 Example request
 
-'''
-    POST localhost:8080/team
-    Content-type: application/json
+```
+POST localhost:8080/team
+Content-type: application/json
 
-    {
-        "team_name": "A-Team",
-        "team_owner": "Mr T"
-    }
-'''
+{
+    "team_name": "A-Team",
+    "team_owner": "Mr T"
+}
+```
 
 Example response
 
-'''
+```
 HTTP/2 201
 Content-type: application/json
 {
@@ -84,4 +80,4 @@ Content-type: application/json
     "team_owner": "Mr T",
     "id": "a3bc2542-7bb4-4a0f-bf78-e2eb400aa094"
 }
-'''
+```
