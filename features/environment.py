@@ -23,7 +23,7 @@ async def before_scenario(context, scenario):
     async with context.app.state.db_conn.acquire() as conn:
         async with conn.transaction():
             await conn.execute("DELETE FROM fantasy_team")
-            await conn.execute("DELETE FROM fantasy_players")
+            await conn.execute("DELETE FROM fantasy_player")
 
 
 @async_run_until_complete

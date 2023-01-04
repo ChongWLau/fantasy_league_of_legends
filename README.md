@@ -40,3 +40,32 @@ make migrate-up
 '''
 
 4. Running Tests
+
+
+## API Docs
+
+### POST /team
+
+Create a fantasy team with a given 'name' and 'owner'.
+
+Example request
+'''
+POST localhost:8080/team
+Content-type: application/json
+
+{
+    "team_name": "A-Team",
+    "team_owner": "Mr T"
+}
+'''
+
+Example response
+'''
+HTTP/2 201
+Content-type: application/json
+{
+    "team_name": "A-Team",
+    "team_owner": "Mr T",
+    "id": "a3bc2542-7bb4-4a0f-bf78-e2eb400aa094"
+}
+'''

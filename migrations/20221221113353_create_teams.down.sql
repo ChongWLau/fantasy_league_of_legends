@@ -1,2 +1,2 @@
-DROP TABLE fantasy_players;
+DROP TABLE fantasy_player;
 DROP TABLE fantasy_team;

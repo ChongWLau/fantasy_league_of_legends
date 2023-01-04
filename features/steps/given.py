@@ -16,10 +16,10 @@ async def the_api_user_has_a_fantasy_team(context: Context) -> None:
 
     # get pool of db connections from the FastAPI application state
     pool = context.app.state.db_conn
-    fantasy_team_id = uuid.uuid4()
+    context.fantasy_team_id = uuid.uuid4()
 
     values = Values(
-        id=fantasy_team_id, fantasy_name="some team name", fantasy_owner="that guy"
+        id=context.fantasy_team_id, fantasy_name="some team name", fantasy_owner="that guy"
     )
 
     # render a SQL INSERT string and column values for merging

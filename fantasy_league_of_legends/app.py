@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from structlog import BoundLogger
 
 from fantasy_league_of_legends.config import Settings
-from fantasy_league_of_legends.api import player_router
+from fantasy_league_of_legends.api import player_router, team_router
 
 
 async def setup_db_pool(logger, settings: Settings) -> asyncpg.Pool | None:
@@ -52,6 +52,7 @@ async def create_app(logger: BoundLogger, settings: Settings):
         logger.info("Shutdown Complete!")
 
     app.include_router(player_router)
+    app.include_router(team_router)
     logger.info("App Created!")
 
     return app

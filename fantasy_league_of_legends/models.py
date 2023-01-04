@@ -4,12 +4,19 @@ from typing import Optional
 
 
 class BaseTeam(BaseModel):
-    id: UUID
     team_owner: str
-
-
-class UpdateTeam(BaseTeam):
     team_name: str
+
+
+class UpdateTeam(BaseModel):
+    team_name: str
+
+
+class ReadTeam(BaseTeam):
+    """
+    Response model for all Team related endpoints
+    """
+    id: UUID
 
 
 class BaseLeaguepediaPlayer(BaseModel):

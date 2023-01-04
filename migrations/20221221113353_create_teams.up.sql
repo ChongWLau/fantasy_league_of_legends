@@ -1,4 +1,4 @@
-CREATE TABLE fantasy_players (
+CREATE TABLE fantasy_player (
     player_name text PRIMARY KEY,
     player_team text NOT NULL,
     player_role text NOT NULL,

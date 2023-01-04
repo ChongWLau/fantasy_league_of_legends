@@ -1,7 +1,11 @@
 from typing import List, Tuple
-
 import structlog
+import uuid
+
+import asyncpg
 from buildpg import V, Values, clauses, render
+
+from fantasy_league_of_legends import models
 
 logger = structlog.getLogger()
 
@@ -27,3 +31,18 @@ def build_select(
 ):
     sql = ":select FROM :table :where"
     return render(sql, select=select, table=table, where=where)
+
+
+async def create_team(conn: asyncpg.connection.Connection, data: dict):
+    values = Values(
+        **data, id=uuid.uuid4()
+    )
+
+    sql, values = build_insert(
+        table=V("fantasy_team"),
+        values=values,
+    )
+
+    team = await conn.fetch(sql, *values)
+
+    return models.ReadTeam(**team[0])

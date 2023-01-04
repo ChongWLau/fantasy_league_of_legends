@@ -24,6 +24,9 @@ pytest:
 behave:
 	behave features --stop
 
+wip:
+	python -m behave features/ -k --tags=wip
+
 mypy:
 	mypy ${LINT_FILES}
 
