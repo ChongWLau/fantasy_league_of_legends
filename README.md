@@ -56,7 +56,7 @@ make test
 
 ### POST /team
 
-Create a fantasy team with a given 'name' and 'owner'.
+Create a fantasy team with a given `team_name` and `team_owner`.
 
 Example request
 
