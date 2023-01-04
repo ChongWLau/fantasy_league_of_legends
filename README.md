@@ -11,12 +11,12 @@ https://github.com/mrtolkien/leaguepedia_parser
 ## Running Locally
 1. Setup local db
 
-'''
+"""
 
 make up
 make migrate-up
 
-'''
+"""
 
 2. Running the service
 
