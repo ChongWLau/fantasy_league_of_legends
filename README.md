@@ -13,18 +13,18 @@ https://github.com/mrtolkien/leaguepedia_parser
 
 """
 
-make up
-make migrate-up
+    make up
+    make migrate-up
 
 """
 
 2. Running the service
 
-'''
+```
 
 make service
 
-'''
+```
 
 
 ## Setting up for development
@@ -65,13 +65,13 @@ Create a fantasy team with a given 'name' and 'owner'.
 Example request
 
 '''
-POST localhost:8080/team
-Content-type: application/json
+    POST localhost:8080/team
+    Content-type: application/json
 
-{
-    "team_name": "A-Team",
-    "team_owner": "Mr T"
-}
+    {
+        "team_name": "A-Team",
+        "team_owner": "Mr T"
+    }
 '''
 
 Example response
